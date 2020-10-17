@@ -1,0 +1,14 @@
+there are 3 ways of creating a handler
+
+  1. Creating a custom MethodHandler (packagename.classname::methodname)
+  2. Implementing the RequestHandler interface (packagename.classname) handlerequest 
+  3. Implementing the RequestStreamHandler interface (packagename.classname) handlerequest
+  
+  1. Create a maven project 
+  2. Create a handle class 
+  3. implement code to connect to db
+  4. add dependencies. For mysql these are required dependencies: 
+    
+  
+  
+  5. Build maven projects and set goals = package shade:shade
