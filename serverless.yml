@@ -33,3 +33,53 @@ resources:
      Type: AWS::S3::Bucket
      Properties:
        BucketName: ${self:service}-${self:provider.stage}-uploads #we can name simply my-bucket-uploads, instaed if we use ${} we can use servicename-stageName-uploads ( in our case it is going to be awesome-api-dev-uploads )
+       
+      userTable:
+     Type: AWS::DynamoDB::Table
+     Properties:
+       TableName: ${self:service}-${self:provider.stage}-users
+       AttributeDefinitions:
+        - AttributeName: userId
+        - AttributeType: S
+       KeySchema:
+        - AttributeName: email
+          KeyType: HASH
+       PrevisionedThroughput:
+         ReadCapacityUnits: 1
+         WriteCapacityUnits: 1
+
+# this example is here: https://www.serverless.com/framework/docs/providers/aws/guide/resources/
+Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: usersTable
+        AttributeDefinitions:
+          - AttributeName: email
+            AttributeType: S
+        KeySchema:
+          - AttributeName: email
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1    
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
