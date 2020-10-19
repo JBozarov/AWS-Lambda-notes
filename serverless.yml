@@ -22,3 +22,14 @@ functions:
       - http:
           path: first-endpoint
           method: get
+
+
+
+
+#Resources
+resources:
+ Resources:
+   uploadBucket:
+     Type: AWS::S3::Bucket
+     Properties:
+       BucketName: ${self:service}-${self:provider.stage}-uploads #we can name simply my-bucket-uploads, instaed if we use ${} we can use servicename-stageName-uploads ( in our case it is going to be awesome-api-dev-uploads )
