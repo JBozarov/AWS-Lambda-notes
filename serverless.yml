@@ -64,6 +64,28 @@ Type: AWS::DynamoDB::Table
        
        
        
+ #worked resource code: 
+ resources:
+  Resources:
+    uploadBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:service}-${self:provider.stage}-uploadsone #we can name simply my-bucket-uploads, instaed if we use ${} we can use servicename-stageName-uploads ( in our case it is going to be awesome-api-dev-uploads )
+    usersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:service}-${self:provider.stage}-usersTableone
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+       
+       
        
 Serverless: Packaging service...
 Serverless: Excluding development dependencies...
