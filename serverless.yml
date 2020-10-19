@@ -11,3 +11,14 @@ provider:
 # you can overwrite defaults here
   stage: dev
   region: us-east-1
+  
+  
+  
+# api gateway 
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: first-endpoint
+          method: get
