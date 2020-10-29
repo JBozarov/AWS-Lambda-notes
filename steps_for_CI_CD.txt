@@ -21,4 +21,25 @@ These are the steps to create CI CD pipeline:
       - for Deploy put S3 deploy bucket and click Extract file before deploy 
       
       
-  6. Edit the pipeline and add one stage, on that stage give stage name, and add action, give action name and choose AWS CodeBuild and choose deploy build ( in my case screen-deploy ) 
+  6. Edit the pipeline and add one stage, on that stage give stage name, and add action, give action name and choose AWS CodeBuild and I choose BuildArtifact and choose deploy build ( in my case screen-deploy ) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
