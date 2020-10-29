@@ -2,6 +2,7 @@ These are the steps to create CI CD pipeline:
 
 
   1. Create project (maven) and implement handler. 
+      - tak 
   
   2. Create CodeCommit repo, and push you STS maven projet into AWS CodeCommit
   
