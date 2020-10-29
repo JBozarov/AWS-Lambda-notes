@@ -13,3 +13,12 @@ These are the steps to create CI CD pipeline:
   
         build build will have buildspec2.yml file under Buildspec 
         Make sure both have the role that has AWSFULLLAMBDAAccess police 
+        
+  5. Pipeline 
+      - put pipeline name, give it a role ( I choose existing role mouse role ) 
+      - for Source put repo from codecommit 
+      - for Build put the build build ( screen build ) 
+      - for Deploy put S3 deploy bucket and click Extract file before deploy 
+      
+      
+  6. Edit the pipeline and add one stage, on that stage give stage name, and add action, give action name and choose AWS CodeBuild and choose deploy build ( in my case screen-deploy ) 
