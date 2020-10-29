@@ -2,6 +2,7 @@ These are the steps to create CI CD pipeline:
 
 
   1. Create project (maven) and implement handler 
+  2. Create lambda function and upload jar file that inside a target, also go to basic settings and update the handler: screen.serverless.App::handleRequest
   1. Created 2 S3 buckets, one for deploy, one for build
   2. Created 2 build, one is deploy build one is build build, both will point the repo on CodeCommit 
         build build will have buildspec2.yml file under Buildspec 
